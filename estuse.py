@@ -68,9 +68,9 @@ class RTError(Error):
 
     return 'Traceback (most recent call last):\n' + result
 
-# ----------------------- #
-#  Pendefinisian Posisi   #
-# ----------------------- #
+# ------------------------ #
+#  Pendefinisian Posisi    #
+# ------------------------ #
 
 class Position:
   def __init__(self, idx, ln, col, fn, ftxt):
