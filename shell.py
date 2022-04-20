@@ -1,9 +1,14 @@
 import estuse
 
 while True:
-    text = input('estuse > ')
-    result, error = estuse.run('<stdin> ',text)
+	text = input('estuse > ')
+	if text.strip() == "": continue
+	result, error = estuse.run('estuse.py ', text)
 
-    if error: print(error.as_string())
-    else: print(result)
-    
+	if error:
+		print(error.as_string())
+	elif result:
+		if len(result.elements) == 1:
+			print(repr(result.elements[0]))
+		else:
+			print(repr(result))
